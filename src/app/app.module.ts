@@ -13,7 +13,7 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 
 // Instructions ---->
 // Replace configPlaceholder with your firebase credentials
-import configPlaceholder from '../env';
+import firebaseConfig from '../environments/environment';
 import { SuperSecretComponent } from './super-secret/super-secret.component';
 
 @NgModule({
@@ -22,7 +22,7 @@ import { SuperSecretComponent } from './super-secret/super-secret.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(configPlaceholder),
+    AngularFireModule.initializeApp(firebaseConfig),
     AngularFirestoreModule,
     AngularFireAuthModule,
     AngularFireStorageModule,
